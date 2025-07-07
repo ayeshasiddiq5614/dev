@@ -12,9 +12,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install Wrangler CLI
-        run: npm install -g wrangler
-
       - name: Publish to Cloudflare Pages
         run: wrangler pages publish ./ --project-name=dev --branch=main
         
